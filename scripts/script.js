@@ -1,20 +1,33 @@
 
+let admissao 
+let demissao 
+let salario 
+let dataDem
+let lastMonthDaysWorked
 
- 
 
 document.querySelector("button").addEventListener("click", function(){
-    let admissao = document.getElementById("adm").value;
-    let demissao = document.getElementById("dem").value;
-    let salario = document.getElementById("sal").value;
+    
+ admissao = document.getElementById("adm").value;
+ demissao = document.getElementById("dem").value;
+ salario = document.getElementById("sal").value;
+    calcSaldo()
 
-    let dataDem = new Date(demissao);
-    let lastMonthDays = dataDem.getDate() +1; 
-    console.log(lastMonthDays)
-
-    let saldoSal = salario/30 * lastMonthDays; 
-    console.log(saldoSal)
+   
 
 
 })
+
+function calcSaldo(){
+    dataDem = new Date(demissao);
+    console.log(dataDem)
+    let lastMonthDaysWorked = dataDem.getDate() +1; 
+    let lastMonthDays = new Date(dataDem.getFullYear(), dataDem.getMonth() +1, 0)
+    console.log(lastMonthDays.getDate());
+    let saldoSal = (salario/lastMonthDays.getDate()) * lastMonthDaysWorked; 
+    console.log(saldoSal.toFixed(2))
+    document.getElementById("saldoDeSalario").innerHTML = saldoSal.toFixed(2)
+}
+
 
 

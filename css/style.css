@@ -11,7 +11,7 @@ button{
     font-weight: bold;
     padding: 5px 20px 5px 20px;
     border: 0;
-    border-radius: 7px;
+    border-radius: 5px;
     
 }
 
@@ -22,17 +22,34 @@ button:hover{
 .container{
     max-width: 800px;
     /* margin-top: 0%; */
-    background-color: #eee3e30e;
+    /* background-color: #eee3e30e; */
     margin: 0 auto;
     padding: 20px;
+    display: flex;
+    justify-content: space-around;
 }
-label{
+#formulario label{
     display: block;
+    margin-top: 10px;
 }
+input{
+    border-radius: 3px;
+    border: 0;
+    padding: 5px 2px;
+}
+
 
 #formulario{
     width: 40%;
-    background-color: #e7e0de77;
+    background-color: #e7e0de49;
     padding: 20px;
+    border-radius: 7px;
     
+}
+
+aside{
+    width: 30%;
+    background-color: #e7e0de49;
+    padding: 20px;
+    border-radius: 7px;
 }
