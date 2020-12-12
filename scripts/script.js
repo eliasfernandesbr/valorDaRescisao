@@ -29,5 +29,12 @@ function calcSaldo(){
     document.getElementById("saldoDeSalario").innerHTML = saldoSal.toFixed(2)
 }
 
+function calcAvPrev(){
+    let dataAdm = new Date(admissao)
+    let anoDem = dataDem.getFullYear()
+    let anoAdm = dataAdm.getFullYear()
+    for( let i = anoAdm; i < anoDem; i++){
 
+    }
+}
 
